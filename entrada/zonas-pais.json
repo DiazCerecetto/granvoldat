@@ -1,0 +1,98 @@
+[
+    {
+      "Departamento": "DURAZNO",
+      "ZonaPais": "Centro",
+      "idZonaPais": 1
+    },
+    {
+      "Departamento": "FLORES",
+      "ZonaPais": "Centro",
+      "idZonaPais": 1
+    },
+    {
+      "Departamento": "FLORIDA",
+      "ZonaPais": "Centro",
+      "idZonaPais": 1
+    },
+    {
+      "Departamento": "LAVALLEJA",
+      "ZonaPais": "Este",
+      "idZonaPais": 2
+    },
+    {
+      "Departamento": "MALDONADO",
+      "ZonaPais": "Este",
+      "idZonaPais": 2
+    },
+    {
+      "Departamento": "ROCHA",
+      "ZonaPais": "Este",
+      "idZonaPais": 2
+    },
+    {
+      "Departamento": "TREINTA Y TRES",
+      "ZonaPais": "Este",
+      "idZonaPais": 2
+    },
+    {
+      "Departamento": "ARTIGAS",
+      "ZonaPais": "Litoral Norte",
+      "idZonaPais": 3
+    },
+    {
+      "Departamento": "PAYSANDU",
+      "ZonaPais": "Litoral Norte",
+      "idZonaPais": 3
+    },
+    {
+      "Departamento": "SALTO",
+      "ZonaPais": "Litoral Norte",
+      "idZonaPais": 3
+    },
+    {
+      "Departamento": "COLONIA",
+      "ZonaPais": "Litoral Sur",
+      "idZonaPais": 4
+    },
+    {
+      "Departamento": "RIO NEGRO",
+      "ZonaPais": "Litoral Sur",
+      "idZonaPais": 4
+    },
+    {
+      "Departamento": "SORIANO",
+      "ZonaPais": "Litoral Sur",
+      "idZonaPais": 4
+    },
+    {
+      "Departamento": "CANELONES",
+      "ZonaPais": "Metropolitana",
+      "idZonaPais": 5
+    },
+    {
+      "Departamento": "MONTEVIDEO",
+      "ZonaPais": "Metropolitana",
+      "idZonaPais": 5
+    },
+    {
+      "Departamento": "SAN JOSE",
+      "ZonaPais": "Metropolitana",
+      "idZonaPais": 5
+    },
+    {
+      "Departamento": "CERRO LARGO",
+      "ZonaPais": "Noreste",
+      "idZonaPais": 6
+    },
+    {
+      "Departamento": "RIVERA",
+      "ZonaPais": "Noreste",
+      "idZonaPais": 6
+    },
+    {
+      "Departamento": "TACUAREMBO",
+      "ZonaPais": "Noreste",
+      "idZonaPais": 6
+    }
+  ]
+  
