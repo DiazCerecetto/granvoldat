@@ -1,0 +1,27 @@
+[
+    {
+        "horario" : "DIURNO",
+        "franjaHoraria":"DIURNO",
+        "idFranjaHoraria":1
+    },
+    {
+        "horario" : "DIURNO EXTENDIDO",
+        "franjaHoraria":"DIURNO",
+        "idFranjaHoraria":1
+    },
+    {
+        "horario" : "MULTI TURNO",
+        "franjaHoraria":"AMBAS",
+        "idFranjaHoraria":3
+    },
+    {
+        "horario" : "NOCTURNO",
+        "franjaHoraria":"NOCTURNO",
+        "idFranjaHoraria":2
+    },
+    {
+        "horario" : "NOCTURNO EXTENDIDO",
+        "franjaHoraria":"NOCTURNO",
+        "idFranjaHoraria":2
+    }
+]
