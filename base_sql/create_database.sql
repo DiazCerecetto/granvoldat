@@ -3,7 +3,7 @@
 
 CREATE TABLE LICEO (
     IDLICEO INTEGER PRIMARY KEY,
-    nomLiceo VARCHAR(50) NOT NULL
+    nomLiceo VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE MODALIDAD (
@@ -13,9 +13,9 @@ CREATE TABLE MODALIDAD (
 
 CREATE TABLE NIVEL (
     idGrado INTEGER PRIMARY KEY,
-    nomGrado VARCHAR(50) NOT NULL,
+    nomGrado VARCHAR(200) NOT NULL,
     idCiclo INTEGER NOT NULL,
-    nomCiclo VARCHAR(50) NOT NULL
+    nomCiclo VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE OPCION (
@@ -25,13 +25,13 @@ CREATE TABLE OPCION (
 
 CREATE TABLE PLAN (
     IDPLAN INTEGER PRIMARY KEY,
-    nomPlan VARCHAR(50) NOT NULL,
+    nomPlan VARCHAR(200) NOT NULL,
     idEpoca INTEGER NOT NULL,
-    nomEpoca VARCHAR(50) NOT NULL,
+    nomEpoca VARCHAR(200) NOT NULL,
     idEsNuevo INTEGER NOT NULL,
-    esNuevo VARCHAR(50) NOT NULL,
+    esNuevo VARCHAR(200) NOT NULL,
     idFranjaEdad INTEGER NOT NULL,
-    franjaEdad VARCHAR(50) NOT NULL
+    franjaEdad VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE TURNOL(
@@ -48,17 +48,17 @@ CREATE TABLE UBICACION (
     latitud FLOAT, -- lo tengo
     longitud FLOAT, -- lo tengo
     idArea INTEGER,
-    nomArea VARCHAR(50),
+    nomArea VARCHAR(200),
     idBarrio INTEGER,
-    nomBarrio VARCHAR(50),
-    idZona INTEGER NOT NULL, -- lo tengo
-    nomZona VARCHAR(50), 
+    nomBarrio VARCHAR(200),
+    idZona INTEGER, -- lo tengo
+    nomZona VARCHAR(200), 
     idLocalidad INTEGER NOT NULL,-- lo tengo
-    nomLocalidad VARCHAR(50) NOT NULL,-- lo tengo
+    nomLocalidad VARCHAR(200) NOT NULL,-- lo tengo
     idDepartamento INTEGER NOT NULL,-- lo tengo
-    nomDepartamento VARCHAR(50) NOT NULL,-- lo tengo
+    nomDepartamento VARCHAR(200) NOT NULL,-- lo tengo
     idZonaPais INTEGER NOT NULL,-- lo tengo
-    nomZonaPais VARCHAR(50) NOT NULL -- lo tengo
+    nomZonaPais VARCHAR(200) NOT NULL -- lo tengo
 );
 
 
@@ -149,3 +149,22 @@ CREATE TABLE OFERTAS_ESCUELAS(
 -- ALTER TABLE OFERTAS_ESCUELAS ADD CONSTRAINT FK_OFERTAS_ESCUELAS_NIVELH FOREIGN KEY (idNivelHasta) REFERENCES NIVELE(idNivel);
 -- ALTER TABLE OFERTAS_ESCUELAS ADD CONSTRAINT FK_OFERTAS_ESCUELAS_UBICACION FOREIGN KEY (idUbicacion) REFERENCES UBICACION(IDUBICACION);
 
+
+
+CREATE SEQUENCE ubicacion_id_seq;
+
+CREATE OR REPLACE FUNCTION ubicacion_trigger_function()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- Si el valor de idUbicacion no se especifica en la inserción, obtén el próximo valor de la secuencia.
+    IF NEW.idUbicacion IS NULL THEN
+        NEW.idUbicacion := nextval('ubicacion_id_seq');
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER ubicacion_trigger
+BEFORE INSERT ON UBICACION
+FOR EACH ROW
+EXECUTE FUNCTION ubicacion_trigger_function();

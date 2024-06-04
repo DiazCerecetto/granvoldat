@@ -1,0 +1,129 @@
+[
+    {
+        "nomPlan" : "ADECUACIÓN PLAN 09 CECAP",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 2,
+        "esNuevo" : "No",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    },
+    {
+        "nomPlan" : "ADECUACIÓN PLAN 09 SEMI PRESENCIAL",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 2,
+        "esNuevo" : "No",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    },
+    {
+        "nomPlan" : "ADECUACIÓN PLAN 09_2017",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 2,
+        "esNuevo" : "No",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    },
+    {
+        "nomPlan" : "ADECUACIÓN PLAN 96 EXTRA EDAD SEMI PRESENCIAL",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 2,
+        "esNuevo" : "No",
+        "idFranjaEdad": 2,
+        "nomFranjaEdad": "Extra Edad"
+    },
+    {
+        "nomPlan" : "CICLO BÁSICO RURAL SEMIPRESENCIAL",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 2,
+        "esNuevo" : "No",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    },
+    {
+        "nomPlan" : "PLAN 1994 MARTHA AVERBUG",
+        "idEpoca" : 2,
+        "nomEpoca" : "Antes 2000",
+        "idEsNuevo" : 1,
+        "esNuevo" : "Si",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+
+    },
+    {
+        "nomPlan" : "PLAN 1996 EXTRA EDAD",
+        "idEpoca" : 2,
+        "nomEpoca" : "Antes 2000",
+        "idEsNuevo" : 1,
+        "esNuevo" : "Si",
+        "idFranjaEdad": 2,
+        "nomFranjaEdad": "Extra Edad"
+    },
+    {
+        "nomPlan" : "PLAN 2012 CICLO BÁSICO EXTRA EDAD",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 1,
+        "esNuevo" : "Si",
+        "idFranjaEdad": 2,
+        "nomFranjaEdad": "Extra Edad"
+    },
+    {
+        "nomPlan" : "PLAN 2013 EXPERIMENTAL EXTRA EDAD",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 1,
+        "esNuevo" : "Si",
+        "idFranjaEdad": 2,
+        "nomFranjaEdad": "Extra Edad"
+    },
+    {
+        "nomPlan" : "PLAN 2023 EDUCACIÓN MEDIA BÁSICA",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 1,
+        "esNuevo" : "Si",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    },
+    {
+        "nomPlan" : "PLAN CICLO BÁSICO 2009",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 1,
+        "esNuevo" : "Si",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    },
+    {
+        "nomPlan" : "PROPUESTA 2016",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 1,
+        "esNuevo" : "Si",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    },
+    {
+        "nomPlan" : "REFORMULACIÓN 2006",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 1,
+        "esNuevo" : "Si",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    },
+    {
+        "nomPlan" : "REFORMULACIÓN 2006_2021 - PARA ESTUDIANTES HIPO ACÚSTICOS",
+        "idEpoca" : 1,
+        "nomEpoca" : "Despues 2000",
+        "idEsNuevo" : 2,
+        "esNuevo" : "No",
+        "idFranjaEdad": 1,
+        "nomFranjaEdad": "Normal"
+    }
+]
