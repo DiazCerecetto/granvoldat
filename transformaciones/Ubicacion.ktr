@@ -719,11 +719,11 @@
     </hop>
     <hop>
       <from>UnionDepartamentos 2 2</from>
-      <to>UbicacionesEscuelas 2 3 2 3</to>
+      <to>Selecciona/Renombra valores</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>UbicacionesEscuelas 2 3 2 3</from>
+      <from>Selecciona/Renombra valores</from>
       <to>UbicacionesEscuelas 2 3</to>
       <enabled>Y</enabled>
     </hop>
@@ -2208,8 +2208,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
-      <yloc>592</yloc>
+      <xloc>304</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2457,6 +2457,94 @@
     </GUI>
   </step>
   <step>
+    <name>Salida Tabla 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>base_postgres</connection>
+    <schema>public</schema>
+    <table>ubicacion</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1488</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Salida Tabla 2 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>base_postgres</connection>
+    <schema>public</schema>
+    <table>ubicacion</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1632</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>SecuenciaDepto</name>
     <type>Sequence</type>
     <description/>
@@ -2591,8 +2679,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>960</xloc>
-      <yloc>560</yloc>
+      <xloc>768</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2714,8 +2802,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
-      <yloc>512</yloc>
+      <xloc>64</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2917,568 +3005,6 @@
     <GUI>
       <xloc>1264</xloc>
       <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>UbicacionesLiceos</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>Calle</name>
-        <rename>calle</rename>
-      </field>
-      <field>
-        <name>Nro_de_puerta</name>
-      </field>
-      <field>
-        <name>Departamento</name>
-        <rename>departamento</rename>
-      </field>
-      <field>
-        <name>Localidad</name>
-        <rename>localidad</rename>
-      </field>
-      <field>
-        <name>Paraje</name>
-      </field>
-      <field>
-        <name>Localidad_1</name>
-      </field>
-      <field>
-        <name>idLocalidad</name>
-      </field>
-      <field>
-        <name>Departamento_1</name>
-      </field>
-      <field>
-        <name>ZonaPais</name>
-      </field>
-      <field>
-        <name>idZonaPais</name>
-      </field>
-      <field>
-        <name>idDepartamento</name>
-      </field>
-      <field>
-        <name>Calle</name>
-        <rename>calle_sola</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>Localidad_1</name>
-      </remove>
-      <remove>
-        <name>Departamento_1</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>UnionDepartamentos</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>OrderByDepto</step1>
-    <step2>OrderByDepto 2</step2>
-    <keys_1>
-      <key>Departamento</key>
-    </keys_1>
-    <keys_2>
-      <key>Departamento</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>448</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>UnionDepartamentos 2</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>OrderByDepto 2</step1>
-    <step2>OrderByDepto 3</step2>
-    <keys_1>
-      <key>Departamento</key>
-    </keys_1>
-    <keys_2>
-      <key>Departamento</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>352</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>UnionDepartamentos 2 2</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>OrderByDepto 3 2 3</step1>
-    <step2>OrderByDepto 3 2 3</step2>
-    <keys_1>
-      <key>Area</key>
-    </keys_1>
-    <keys_2>
-      <key>Area</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1136</xloc>
-      <yloc>576</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>UnionLocalidad</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>OrderByLocalidad</step1>
-    <step2>SecuenciaLocalidad</step2>
-    <keys_1>
-      <key>Localidad</key>
-    </keys_1>
-    <keys_2>
-      <key>Localidad</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>448</xloc>
-      <yloc>96</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>UnionLocalidad 2</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>OrderByLocalidad 2</step1>
-    <step2>SecuenciaLocalidad 2</step2>
-    <keys_1>
-      <key>Localidad</key>
-    </keys_1>
-    <keys_2>
-      <key>Localidad</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>480</xloc>
-      <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Unique rows</name>
-    <type>UniqueRowsByHashSet</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <store_values>N</store_values>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <error_description/>
-    <fields>
-      <field>
-        <name>Calle</name>
-      </field>
-      <field>
-        <name>Nro_de_puerta</name>
-      </field>
-      <field>
-        <name>Departamento</name>
-      </field>
-      <field>
-        <name>Localidad</name>
-      </field>
-      <field>
-        <name>Paraje</name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>336</xloc>
-      <yloc>16</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Unique rows 2</name>
-    <type>UniqueRowsByHashSet</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <store_values>N</store_values>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <error_description/>
-    <fields>
-      <field>
-        <name>Area</name>
-      </field>
-      <field>
-        <name>Calle</name>
-      </field>
-      <field>
-        <name>Nro_de_puerta</name>
-      </field>
-      <field>
-        <name>Departamento</name>
-      </field>
-      <field>
-        <name>Localidad</name>
-      </field>
-      <field>
-        <name>Paraje</name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>288</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Unique rows 2 2</name>
-    <type>UniqueRowsByHashSet</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <store_values>N</store_values>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <error_description/>
-    <fields>
-      <field>
-        <name>Area</name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>576</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Valor JavaScript modificado</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>var regexX = /"puntoX":\s*(-?\d+\.\d+)/;
-var regexY = /"puntoY":\s*(-?\d+\.\d+)/;
-var regexCP = /"codigoPostal":\s*(\d+)/;
-
-
-var matchX = result.match(regexX);
-var matchY = result.match(regexY);
-var matchCP = result.match(regexCP);
-
-var longitud = null;
-var latitud = null;
-var idZona = null
-
-if (matchX &amp;&amp; matchX.length > 1) {
-    longitud = parseFloat(matchX[1]);
-}
-//else{
-//	Alert("Latitud falló");
-//}
-
-if (matchY &amp;&amp; matchY.length > 1) {
-    latitud = parseFloat(matchY[1]);
-}
-//else{
-//	Alert("Longitud falló");
-//}
-
-if (matchCP &amp;&amp; matchCP.length >1){
-	idZona = parseInt(matchCP[1]);
-}
-//else{
-//	Alert("CPostal falló");
-//}
-
-
-
-result = null;</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>latitud</name>
-        <rename>latitud</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>longitud</name>
-        <rename>longitud</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>idZona</name>
-        <rename>idZona</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1104</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Valor JavaScript modificado 2</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>var regexX = /"puntoX":\s*(-?\d+\.\d+)/;
-var regexY = /"puntoY":\s*(-?\d+\.\d+)/;
-var regexCP = /"codigoPostal":\s*(\d+)/;
-
-
-var matchX = result.match(regexX);
-var matchY = result.match(regexY);
-var matchCP = result.match(regexCP);
-
-var longitud = null;
-var latitud = null;
-var idZona = null
-
-if (matchX &amp;&amp; matchX.length > 1) {
-    longitud = parseFloat(matchX[1]);
-}
-//else{
-//	Alert("Latitud falló");
-//}
-
-if (matchY &amp;&amp; matchY.length > 1) {
-    latitud = parseFloat(matchY[1]);
-}
-//else{
-//	Alert("Longitud falló");
-//}
-
-if (matchCP &amp;&amp; matchCP.length >1){
-	idZona = parseInt(matchCP[1]);
-}
-//else{
-//	Alert("CPostal falló");
-//}
-
-
-
-result = null;</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>latitud</name>
-        <rename>latitud</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>longitud</name>
-        <rename>longitud</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>idZona</name>
-        <rename>idZona</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1152</xloc>
-      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3715,50 +3241,6 @@ result = null;</jsScript_script>
     </GUI>
   </step>
   <step>
-    <name>Salida Tabla 2</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>base_postgres</connection>
-    <schema>public</schema>
-    <table>ubicacion</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1488</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>UbicacionesEscuelas 2 3 2</name>
     <type>SelectValues</type>
     <description/>
@@ -3772,55 +3254,42 @@ result = null;</jsScript_script>
     <fields>
       <field>
         <name>Nro_de_puerta</name>
-        <rename/>
       </field>
       <field>
         <name>departamento</name>
-        <rename/>
       </field>
       <field>
         <name>localidad</name>
-        <rename/>
       </field>
       <field>
         <name>Paraje</name>
-        <rename/>
       </field>
       <field>
         <name>idLocalidad</name>
-        <rename/>
       </field>
       <field>
         <name>ZonaPais</name>
-        <rename/>
       </field>
       <field>
         <name>idZonaPais</name>
-        <rename/>
       </field>
       <field>
         <name>idDepartamento</name>
-        <rename/>
       </field>
       <field>
         <name>latitud</name>
-        <rename/>
       </field>
       <field>
         <name>longitud</name>
-        <rename/>
       </field>
       <field>
         <name>idZona</name>
-        <rename/>
       </field>
       <field>
         <name>Area</name>
-        <rename/>
       </field>
       <field>
         <name>idArea</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <remove>
@@ -3855,51 +3324,39 @@ result = null;</jsScript_script>
     <fields>
       <field>
         <name>departamento</name>
-        <rename/>
       </field>
       <field>
         <name>localidad</name>
-        <rename/>
       </field>
       <field>
         <name>Paraje</name>
-        <rename/>
       </field>
       <field>
         <name>idLocalidad</name>
-        <rename/>
       </field>
       <field>
         <name>ZonaPais</name>
-        <rename/>
       </field>
       <field>
         <name>idZonaPais</name>
-        <rename/>
       </field>
       <field>
         <name>idDepartamento</name>
-        <rename/>
       </field>
       <field>
         <name>latitud</name>
-        <rename/>
       </field>
       <field>
         <name>longitud</name>
-        <rename/>
       </field>
       <field>
         <name>idZona</name>
-        <rename/>
       </field>
       <field>
         <name>Area</name>
-        <rename/>
       </field>
       <field>
         <name>idArea</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -4122,8 +3579,8 @@ result = null;</jsScript_script>
     </GUI>
   </step>
   <step>
-    <name>Salida Tabla 2 2</name>
-    <type>TableOutput</type>
+    <name>UbicacionesLiceos</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -4132,24 +3589,54 @@ result = null;</jsScript_script>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>base_postgres</connection>
-    <schema>public</schema>
-    <table>ubicacion</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
     <fields>
+      <field>
+        <name>Calle</name>
+        <rename>calle</rename>
+      </field>
+      <field>
+        <name>Nro_de_puerta</name>
+      </field>
+      <field>
+        <name>Departamento</name>
+        <rename>departamento</rename>
+      </field>
+      <field>
+        <name>Localidad</name>
+        <rename>localidad</rename>
+      </field>
+      <field>
+        <name>Paraje</name>
+      </field>
+      <field>
+        <name>Localidad_1</name>
+      </field>
+      <field>
+        <name>idLocalidad</name>
+      </field>
+      <field>
+        <name>Departamento_1</name>
+      </field>
+      <field>
+        <name>ZonaPais</name>
+      </field>
+      <field>
+        <name>idZonaPais</name>
+      </field>
+      <field>
+        <name>idDepartamento</name>
+      </field>
+      <field>
+        <name>Calle</name>
+        <rename>calle_sola</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>Localidad_1</name>
+      </remove>
+      <remove>
+        <name>Departamento_1</name>
+      </remove>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -4160,16 +3647,504 @@ result = null;</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1632</xloc>
-      <yloc>496</yloc>
+      <xloc>704</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>UbicacionesEscuelas 2 3 2 3</name>
-    <type>SelectValues</type>
+    <name>UnionDepartamentos</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>OrderByDepto</step1>
+    <step2>OrderByDepto 2</step2>
+    <keys_1>
+      <key>Departamento</key>
+    </keys_1>
+    <keys_2>
+      <key>Departamento</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>UnionDepartamentos 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>OrderByDepto 2</step1>
+    <step2>OrderByDepto 3</step2>
+    <keys_1>
+      <key>Departamento</key>
+    </keys_1>
+    <keys_2>
+      <key>Departamento</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>UnionDepartamentos 2 2</name>
+    <type>MergeJoin</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>OrderByDepto 3 2 3</step1>
+    <step2>OrderByDepto 3 2 3</step2>
+    <keys_1>
+      <key>Area</key>
+    </keys_1>
+    <keys_2>
+      <key>Area</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>UnionLocalidad</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>OrderByLocalidad</step1>
+    <step2>SecuenciaLocalidad</step2>
+    <keys_1>
+      <key>Localidad</key>
+    </keys_1>
+    <keys_2>
+      <key>Localidad</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>UnionLocalidad 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>OrderByLocalidad 2</step1>
+    <step2>SecuenciaLocalidad 2</step2>
+    <keys_1>
+      <key>Localidad</key>
+    </keys_1>
+    <keys_2>
+      <key>Localidad</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Unique rows</name>
+    <type>UniqueRowsByHashSet</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <store_values>N</store_values>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <fields>
+      <field>
+        <name>Calle</name>
+      </field>
+      <field>
+        <name>Nro_de_puerta</name>
+      </field>
+      <field>
+        <name>Departamento</name>
+      </field>
+      <field>
+        <name>Localidad</name>
+      </field>
+      <field>
+        <name>Paraje</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Unique rows 2</name>
+    <type>UniqueRowsByHashSet</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <store_values>N</store_values>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <fields>
+      <field>
+        <name>Area</name>
+      </field>
+      <field>
+        <name>Calle</name>
+      </field>
+      <field>
+        <name>Nro_de_puerta</name>
+      </field>
+      <field>
+        <name>Departamento</name>
+      </field>
+      <field>
+        <name>Localidad</name>
+      </field>
+      <field>
+        <name>Paraje</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Unique rows 2 2</name>
+    <type>UniqueRowsByHashSet</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <store_values>N</store_values>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <fields>
+      <field>
+        <name>Area</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Valor JavaScript modificado</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var regexX = /"puntoX":\s*(-?\d+\.\d+)/;
+var regexY = /"puntoY":\s*(-?\d+\.\d+)/;
+var regexCP = /"codigoPostal":\s*(\d+)/;
+
+
+var matchX = result.match(regexX);
+var matchY = result.match(regexY);
+var matchCP = result.match(regexCP);
+
+var longitud = null;
+var latitud = null;
+var idZona = null
+
+if (matchX &amp;&amp; matchX.length > 1) {
+    longitud = parseFloat(matchX[1]);
+}
+//else{
+//	Alert("Latitud falló");
+//}
+
+if (matchY &amp;&amp; matchY.length > 1) {
+    latitud = parseFloat(matchY[1]);
+}
+//else{
+//	Alert("Longitud falló");
+//}
+
+if (matchCP &amp;&amp; matchCP.length >1){
+	idZona = parseInt(matchCP[1]);
+}
+//else{
+//	Alert("CPostal falló");
+//}
+
+
+
+result = null;</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>latitud</name>
+        <rename>latitud</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>longitud</name>
+        <rename>longitud</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>idZona</name>
+        <rename>idZona</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Valor JavaScript modificado 2</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var regexX = /"puntoX":\s*(-?\d+\.\d+)/;
+var regexY = /"puntoY":\s*(-?\d+\.\d+)/;
+var regexCP = /"codigoPostal":\s*(\d+)/;
+
+
+var matchX = result.match(regexX);
+var matchY = result.match(regexY);
+var matchCP = result.match(regexCP);
+
+var longitud = null;
+var latitud = null;
+var idZona = null
+
+if (matchX &amp;&amp; matchX.length > 1) {
+    longitud = parseFloat(matchX[1]);
+}
+//else{
+//	Alert("Latitud falló");
+//}
+
+if (matchY &amp;&amp; matchY.length > 1) {
+    latitud = parseFloat(matchY[1]);
+}
+//else{
+//	Alert("Longitud falló");
+//}
+
+if (matchCP &amp;&amp; matchCP.length >1){
+	idZona = parseInt(matchCP[1]);
+}
+//else{
+//	Alert("CPostal falló");
+//}
+
+
+
+result = null;</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>latitud</name>
+        <rename>latitud</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>longitud</name>
+        <rename>longitud</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>idZona</name>
+        <rename>idZona</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1152</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Selecciona/Renombra valores</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -4210,7 +4185,15 @@ result = null;</jsScript_script>
         <rename/>
       </field>
       <field>
+        <name>Nro_de_puerta</name>
+        <rename/>
+      </field>
+      <field>
         <name>Paraje</name>
+        <rename/>
+      </field>
+      <field>
+        <name>calle</name>
         <rename/>
       </field>
       <field>
@@ -4226,9 +4209,6 @@ result = null;</jsScript_script>
         <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>Nro_de_puerta</name>
-      </remove>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -4245,6 +4225,18 @@ result = null;</jsScript_script>
     </GUI>
   </step>
   <step_error_handling>
+    <error>
+      <source_step>SelectUbicacion 2</source_step>
+      <target_step>CEIP_input</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename/>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors/>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
