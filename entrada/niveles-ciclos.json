@@ -1,0 +1,10 @@
+[
+    {
+        "idCiclo":0,
+        "nomCiclo":"Ciclo Basico"
+    },
+    {
+        "idCiclo":1,
+        "nomCiclo":"Bachillerato"
+    }
+]

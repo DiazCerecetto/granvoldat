@@ -1,0 +1,22 @@
+[
+    {
+        "idTurnoGeneral": 1,
+        "nomTurnoGeneral": "MATUTINO"
+    },
+    {
+        "idTurnoGeneral": 2,
+        "nomTurnoGeneral": "VESPERTINO"
+    },
+    {
+        "idTurnoGeneral": 3,
+        "nomTurnoGeneral": "NOCTURNO"
+    },
+    {
+        "idTurnoGeneral": 4,
+        "nomTurnoGeneral": "EXTENDIDO"
+    },
+    {
+        "idTurnoGeneral": 5,
+        "nomTurnoGeneral": "Sin Dato"
+    }
+]

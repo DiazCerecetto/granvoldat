@@ -1,0 +1,14 @@
+{"data":
+    [
+    {"nivel":"", "ciclo":"", "idCiclo":1},
+    {"nivel":"1", "ciclo":"PRIMARIA", "idCiclo":1},
+    {"nivel":"2", "ciclo":"PRIMARIA", "idCiclo":1},
+    {"nivel":"3", "ciclo":"PRIMARIA", "idCiclo":1},
+    {"nivel":"3 AÑOS", "ciclo":"INICIAL", "idCiclo":2},
+    {"nivel":"4", "ciclo":"PRIMARIA", "idCiclo":1},
+    {"nivel":"4 AÑOS", "ciclo":"INICIAL", "idCiclo":2},
+    {"nivel":"5", "ciclo":"PRIMARIA", "idCiclo":1},
+    {"nivel":"5 AÑOS", "ciclo":"INICIAL", "idCiclo":2},
+    {"nivel":"6", "ciclo":"PRIMARIA", "idCiclo":1}
+    ]
+}

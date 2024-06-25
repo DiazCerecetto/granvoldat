@@ -1,0 +1,42 @@
+[
+    {
+        "Nombre":"Sin Dato",
+        "idTipo":3,
+        "NombreTipo":"Sin Dato"
+    },
+    {
+        "Nombre":"DOBLE TURNO",
+        "idTipo":1,
+        "NombreTipo":"CORTO"
+    },
+    {
+        "Nombre":"ESPECIAL",
+        "idTipo":1,
+        "NombreTipo":"CORTO"
+    },
+    {
+        "Nombre":"EXTENDIDO",
+        "idTipo":2,
+        "NombreTipo":"LARGO"
+    },
+    {
+        "Nombre":"MATUTINO",
+        "idTipo":1,
+        "NombreTipo":"CORTO"
+    },
+    {
+        "Nombre":"RURAL",
+        "idTipo":2,
+        "NombreTipo":"LARGO"
+    },
+    {
+        "Nombre":"TIEMPO COMPLETO",
+        "idTipo":2,
+        "NombreTipo":"LARGO"
+    },
+    {
+        "Nombre":"VESPERTINO",
+        "idTipo":1,
+        "NombreTipo":"CORTO"
+    }
+]

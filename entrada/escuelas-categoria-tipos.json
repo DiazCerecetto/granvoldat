@@ -1,0 +1,171 @@
+[
+    {
+        "nomCategoria": "APRENDER",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"APRENDER  H. DE PRÁCTICA",
+        "nomPractica":"PRACTICA",
+        "idPractica":1,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"CON MAESTRO A CARGO",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"DE PRÁCTICA",
+        "nomPractica":"PRACTICA",
+        "idPractica":1,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"DE TIEMPO COMPLETO",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"DISCAPACIDAD INTELECTUAL",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"DISCAPACIDAD",
+        "idDiscapacidad":1
+    },
+    {
+        "nomCategoria":"DISCAPACIDAD MOTRIZ",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"DISCAPACIDAD",
+        "idDiscapacidad":1
+    },
+    {
+        "nomCategoria":"DISCAPACIDAD VISUAL",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"DISCAPACIDAD",
+        "idDiscapacidad":1
+    },
+    {
+        "nomCategoria":"ESCUELAS COMUNES",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"HABILITADA DE PRÁCTICA",
+        "nomPractica":"PRACTICA",
+        "idPractica":1,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"JARDÍN APRENDER",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"JARDÍN COMÚN",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"JARDÍN DE CICLO INICIAL",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"JARDÍN DE JORNADA COMPLETA",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"JARDÍN EXTENSIÓN HORARIA",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"PLURIDISCAPACIDAD",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"DISCAPACIDAD",
+        "idDiscapacidad":1
+    },
+    {
+        "nomCategoria":"PROBLEMAS DE CONDUCTA",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"PROBLEMAS DE PERSONALIDAD",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"DISCAPACIDAD",
+        "idDiscapacidad":1
+    },
+    {
+        "nomCategoria":"SORDOS",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"DISCAPACIDAD",
+        "idDiscapacidad":1
+    },
+    {
+        "nomCategoria":"T.EXTENDIDO H. DE PRÁCTICA",
+        "nomPractica":"PRACTICA",
+        "idPractica":1,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"T.EXTENDIDO-DE PRÁCTICA",
+        "nomPractica":"PRACTICA",
+        "idPractica":1,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"TIEMPO EXTENDIDO",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    },
+    {
+        "nomCategoria":"TRASTORNOS GENERALIZADOS DE",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"DISCAPACIDAD",
+        "idDiscapacidad":1
+    },
+    {
+        "nomCategoria":"UNIDOCENTE",
+        "nomPractica":"NO_PRACTICA",
+        "idPractica":2,
+        "nomDiscapacidad":"NO_DISCAPACIDAD",
+        "idDiscapacidad":2
+    }
+
+]

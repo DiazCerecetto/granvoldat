@@ -439,8 +439,8 @@
       <note>select * from turnol</note>
       <xloc>608</xloc>
       <yloc>160</yloc>
-      <width>112</width>
-      <heigth>26</heigth>
+      <width>164</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -642,7 +642,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Users\admin\Desktop\granvoldat\entrada\CES-2024.xlsx</name>
+      <name>C:\Users\Miguelángel\Desktop\granvoldat\entrada\CES-2024.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -663,7 +663,7 @@
       </field>
       <field>
         <name>Ruee_Calculado</name>
-        <type>Number</type>
+        <type>None</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -675,7 +675,7 @@
       </field>
       <field>
         <name>Rule_Calculado</name>
-        <type>Number</type>
+        <type>None</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -711,7 +711,7 @@
       </field>
       <field>
         <name>Nro_de_puerta</name>
-        <type>String</type>
+        <type>None</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -723,7 +723,7 @@
       </field>
       <field>
         <name>Nro_de_Centro</name>
-        <type>Number</type>
+        <type>None</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1072,7 +1072,7 @@
     </fields>
     <sheets>
       <sheet>
-        <name>Hoja2</name>
+        <name>Sheet1</name>
         <startrow>0</startrow>
         <startcol>0</startcol>
       </sheet>
@@ -1105,7 +1105,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>48</xloc>
+      <xloc>32</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1134,7 +1134,7 @@
     <includeNulls>N</includeNulls>
     <rownum_field/>
     <file>
-      <name>C:\Users\admin\Desktop\granvoldat\entrada\turnosL-franjaHoraria.json</name>
+      <name>C:\Users\Miguelángel\Desktop\granvoldat\entrada\turnosL-franjaHoraria.json</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>

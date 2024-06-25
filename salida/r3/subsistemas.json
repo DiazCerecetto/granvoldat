@@ -1,0 +1,10 @@
+[
+    {
+        "idSubsistema": 1,
+        "nomSubsistema":"DGEIP"
+    },
+    {
+        "idSubsistema": 2,
+        "nomSubsistema":"DGES"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "Nombre":"Sin Dato",
+        "idFranja":4,
+        "nomFranja":"Sin Dato"
+    },
+    {
+        "Nombre":"DOBLE TURNO",
+        "idFranja":1,
+        "nomFranja":"MATUTINO"
+    },
+    {
+        "Nombre":"ESPECIAL",
+        "idFranja":1,
+        "nomFranja":"AMBOS"
+    },
+    {
+        "Nombre":"EXTENDIDO",
+        "idFranja":1,
+        "nomFranja":"AMBOS"
+    },
+    {
+        "Nombre":"MATUTINO",
+        "idFranja":2,
+        "nomFranja":"MATUTINO"
+    },
+    {
+        "Nombre":"RURAL",
+        "idFranja":1,
+        "nomFranja":"AMBOS"
+    },
+    {
+        "Nombre":"TIEMPO COMPLETO",
+        "idFranja":1,
+        "nomFranja":"AMBOS"
+    },
+    {
+        "Nombre":"VESPERTINO",
+        "idFranja":3,
+        "nomFranja":"VESPERTINO"
+    }
+]

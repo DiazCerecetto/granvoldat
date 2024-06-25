@@ -1,0 +1,42 @@
+[
+    {
+        "idNivel": 1,
+        "edad": null
+    },
+    {
+        "idNivel": 2,
+        "edad": 6
+    },
+    {
+        "idNivel": 3,
+        "edad": 7
+    },
+    {
+        "idNivel": 4,
+        "edad": 8
+    },
+    {
+        "idNivel": 5,
+        "edad": 3
+    },
+    {
+        "idNivel": 6,
+        "edad": 9
+    },
+    {
+        "idNivel": 7,
+        "edad": 4
+    },
+    {
+        "idNivel": 8,
+        "edad": 10
+    },
+    {
+        "idNivel": 9,
+        "edad": 5
+    },
+    {
+        "idNivel": 10,
+        "edad": 11
+    }
+]
