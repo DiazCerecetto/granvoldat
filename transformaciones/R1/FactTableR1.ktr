@@ -658,6 +658,11 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Select values 2 2 3</from>
+      <to>Formula 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Sort rows 2 3 3 3 3 3</from>
       <to>Merge join 2 2 2 2 2 2</to>
       <enabled>Y</enabled>
@@ -668,28 +673,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table input 2 2 2 2 2</from>
-      <to>Formula</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Formula</from>
-      <to>Select values 2 2 3 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2 2 3</from>
-      <to>Formula 2</to>
+      <from>Select values 2 2 3 2 2</from>
+      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Formula 2</from>
       <to>Select values 2 2 3 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2 2 3 2 2</from>
-      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1319,39 +1309,6 @@
     <GUI>
       <xloc>304</xloc>
       <yloc>368</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Formula</name>
-    <type>Formula</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <formula>
-      <field_name>resultado</field_name>
-      <formula_string>100/[count]</formula_string>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field/>
-    </formula>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1504</xloc>
-      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2182,53 +2139,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 2 2 3 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>resultado</name>
-        <rename>resultado</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1504</xloc>
-      <yloc>480</yloc>
+      <xloc>912</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2246,33 +2158,35 @@
     <fields>
       <field>
         <name>idLiceo</name>
+        <rename/>
       </field>
       <field>
         <name>idModalidad</name>
+        <rename/>
       </field>
       <field>
         <name>idNivel</name>
+        <rename/>
       </field>
       <field>
         <name>idPlan</name>
+        <rename/>
       </field>
       <field>
         <name>idTurnoL</name>
+        <rename/>
       </field>
       <field>
         <name>idubicacion</name>
+        <rename/>
       </field>
       <field>
         <name>idOpcion</name>
-      </field>
-      <field>
-        <name>PorcEstudiantes</name>
-      </field>
-      <field>
-        <name>PorcDocentes</name>
+        <rename/>
       </field>
       <field>
         <name>porcLiceos</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -2382,40 +2296,6 @@
         <rename>idOpcion</rename>
         <type>None</type>
         <length>9</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PorcEstudiantes</name>
-        <rename>PorcEstudiantes</rename>
-        <type>None</type>
-        <length>15</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PorcDocentes</name>
-        <rename>PorcDocentes</rename>
-        <type>None</type>
-        <length>15</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -2931,6 +2811,48 @@
     </GUI>
   </step>
   <step>
+    <name>Sort rows 2 3 3 3 3 3</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>cod_iso</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Sort rows 2 3 3 3 3 2</name>
     <type>SortRows</type>
     <description/>
@@ -2977,48 +2899,6 @@
     <GUI>
       <xloc>16</xloc>
       <yloc>480</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows 2 3 3 3 3 3</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>cod_iso</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3516,64 +3396,6 @@
     </GUI>
   </step>
   <step>
-    <name>Table input 2 2 2 2 2</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>base_postgres</connection>
-    <sql>SELECT count(*) FROM liceo</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta>
-      <value-meta>
-        <type>Integer</type>
-        <storagetype>normal</storagetype>
-        <name>count</name>
-        <length>15</length>
-        <precision>0</precision>
-        <origin>Table input 2 2 2 2 2</origin>
-        <comments>count</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_UY</date_format_locale>
-        <date_format_timezone>America/Montevideo</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-    </row-meta>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1504</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Table input 2 2 2 3</name>
     <type>TableInput</type>
     <description/>
@@ -3693,8 +3515,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1488</xloc>
-      <yloc>672</yloc>
+      <xloc>1536</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

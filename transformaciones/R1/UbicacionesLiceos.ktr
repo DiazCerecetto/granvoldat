@@ -563,8 +563,8 @@
     </notepad>
     <notepad>
       <note>idZona (codigo Postal)</note>
-      <xloc>64</xloc>
-      <yloc>832</yloc>
+      <xloc>352</xloc>
+      <yloc>688</yloc>
       <width>189</width>
       <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
@@ -756,36 +756,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>SelectUbicacion 3 2 3 2 2</from>
-      <to>OrderByLatLong 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>OrderByLatLong 4</from>
-      <to>SelectUbicacion 3 2 3 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>JSON input 2</from>
-      <to>SelectUbicacion 3 2 3 2 2 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>OrderByLatLong 4</from>
-      <to>UnionUbicaciones 2 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>SelectUbicacion 3 2 3 2 2 3</from>
-      <to>UnionUbicaciones 2 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>UnionUbicaciones 2 2 2 2</from>
-      <to>SelectUbicacion 3 2 3 2 2 3 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Formula 2 2 2 2 2 2 3</from>
       <to>SelectUbicacion 3 2 3 2 2 3 2 4 2 2</to>
       <enabled>Y</enabled>
@@ -831,46 +801,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Cliente HTTP</from>
-      <to>SelectUbicacion 3 2 3 2 2 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Formula 2 2 2 2 2 2</from>
-      <to>Formula 2 2 2 2 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Formula 2 2 2 2 2 3 2 2</from>
-      <to>SelectUbicacion 3 2 3 2 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>SelectUbicacion 3 2 3 2 2 2 2</from>
-      <to>Cliente HTTP</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>SelectUbicacion 3 2 3 2 2 2 2 2</from>
-      <to>SelectUbicacion 3 2 3 2 2 2 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>SelectUbicacion 3 2 3 2 2 2 2 2 2</from>
-      <to>Formula 2 2 2 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>SelectUbicacion 3 2 3 2 2 2</from>
-      <to>Formula 2 2 2 2 2 3 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Formula 2 2 2 2 2 2 2</from>
-      <to>JSON input 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>OrderByLatLong 4 2</from>
       <to>SelectUbicacion 3 2 3 2 2 3 2 4</to>
       <enabled>Y</enabled>
@@ -878,6 +808,11 @@
     <hop>
       <from>SelectUbicacion 3 2 3 2 2 3 2 4</from>
       <to>Formula 2 2 2 2 2 2 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>SelectUbicacion 3 2 3 2 2</from>
+      <to>SelectUbicacion 3 2 3 2 2 3 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1437,62 +1372,6 @@
     </GUI>
   </step>
   <step>
-    <name>Cliente HTTP</name>
-    <type>HTTP</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <url>https://direcciones.ide.uy/api/v0/geocode/reverse</url>
-    <urlInField>N</urlInField>
-    <urlField/>
-    <encoding>UTF-8</encoding>
-    <httpLogin/>
-    <httpPassword>Encrypted </httpPassword>
-    <proxyHost/>
-    <proxyPort/>
-    <socketTimeout>100000</socketTimeout>
-    <connectionTimeout>100000</connectionTimeout>
-    <closeIdleConnectionsTime>-1</closeIdleConnectionsTime>
-    <lookup>
-      <arg>
-        <name>latitud</name>
-        <parameter>latitud</parameter>
-      </arg>
-      <arg>
-        <name>longitud</name>
-        <parameter>longitud</parameter>
-      </arg>
-      <arg>
-        <name>limit</name>
-        <parameter>limit</parameter>
-      </arg>
-    </lookup>
-    <result>
-      <name>result</name>
-      <code/>
-      <response_time/>
-      <response_header/>
-    </result>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>736</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Formula 2 2 2 2</name>
     <type>Formula</type>
     <description/>
@@ -1522,72 +1401,6 @@
     <GUI>
       <xloc>416</xloc>
       <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Formula 2 2 2 2 2 2</name>
-    <type>Formula</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <formula>
-      <field_name>result</field_name>
-      <formula_string>SUBSTITUTE([result];"[" ; "" )</formula_string>
-      <value_type>String</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field>result</replace_field>
-    </formula>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>288</xloc>
-      <yloc>656</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Formula 2 2 2 2 2 2 2</name>
-    <type>Formula</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <formula>
-      <field_name>result</field_name>
-      <formula_string>SUBSTITUTE([result];"]" ; "" )</formula_string>
-      <value_type>String</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field>result</replace_field>
-    </formula>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>384</xloc>
-      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1629,58 +1442,6 @@
     <GUI>
       <xloc>384</xloc>
       <yloc>1008</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Formula 2 2 2 2 2 3 2 2</name>
-    <type>Formula</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <formula>
-      <field_name>latitud</field_name>
-      <formula_string>IF(CONTAINS(TEXT([lon]);"," );REPLACE(TEXT([lon]);FIND(TEXT([lon]);",");1;".");TEXT([lon]))
-
-</formula_string>
-      <value_type>String</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field/>
-    </formula>
-    <formula>
-      <field_name>longitud</field_name>
-      <formula_string>IF(CONTAINS(TEXT([lat]);"," );REPLACE(TEXT([lat]);FIND(TEXT([lat]);",");1;".");TEXT([lat]))
-</formula_string>
-      <value_type>String</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field/>
-    </formula>
-    <formula>
-      <field_name>limit</field_name>
-      <formula_string>1</formula_string>
-      <value_type>Integer</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field/>
-    </formula>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>48</xloc>
-      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1778,402 +1539,6 @@
     <GUI>
       <xloc>944</xloc>
       <yloc>576</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>JSON input 2</name>
-    <type>JsonInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <readurl>N</readurl>
-    <removeSourceField>Y</removeSourceField>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <ignoreMissingPath>Y</ignoreMissingPath>
-    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
-    <includeNulls>N</includeNulls>
-    <rownum_field/>
-    <file>
-      <name>C:\Users\Miguelángel\Desktop\granvoldat\entrada\result.json</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>address</name>
-        <path>$.address</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>departamento</name>
-        <path>$.departamento</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>geom</name>
-        <path>$.geom</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>id</name>
-        <path>$.id</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idCalle</name>
-        <path>$.idCalle</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idCalleEsq</name>
-        <path>$.idCalleEsq</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idDepartamento</name>
-        <path>$.idDepartamento</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idLocalidad</name>
-        <path>$.idLocalidad</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>inmueble</name>
-        <path>$.inmueble</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>km</name>
-        <path>$.km</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>lat</name>
-        <path>$.lat</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>letra</name>
-        <path>$.letra</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>lng</name>
-        <path>$.lng</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>localidad</name>
-        <path>$.localidad</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>manzana</name>
-        <path>$.manzana</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>nomVia</name>
-        <path>$.nomVia</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>portalNumber</name>
-        <path>$.portalNumber</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>postalCode</name>
-        <path>$.postalCode</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>priority</name>
-        <path>$.priority</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ranking</name>
-        <path>$.ranking</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>solar</name>
-        <path>$.solar</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>source</name>
-        <path>$.source</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>state</name>
-        <path>$.state</path>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>stateMsg</name>
-        <path>$.stateMsg</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>tip_via</name>
-        <path>$.tip_via</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>type</name>
-        <path>$.type</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>N</IsAFile>
-    <valueField>result</valueField>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>480</xloc>
-      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2442,56 +1807,6 @@
     <GUI>
       <xloc>368</xloc>
       <yloc>1088</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>OrderByLatLong 4</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>latitud</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>longitud</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>400</xloc>
-      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2940,207 +2255,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>SelectUbicacion 3 2 3 2 2 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>latitud</name>
-        <rename>lat</rename>
-      </field>
-      <field>
-        <name>longitud</name>
-        <rename>lon</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>288</xloc>
-      <yloc>512</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>SelectUbicacion 3 2 3 2 2 2 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>lat</name>
-      </field>
-      <field>
-        <name>lon</name>
-      </field>
-      <field>
-        <name>latitud</name>
-      </field>
-      <field>
-        <name>longitud</name>
-      </field>
-      <field>
-        <name>limit</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>48</xloc>
-      <yloc>624</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>SelectUbicacion 3 2 3 2 2 2 2 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>lat</name>
-      </field>
-      <field>
-        <name>lon</name>
-      </field>
-      <field>
-        <name>limit</name>
-      </field>
-      <field>
-        <name>result</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>192</xloc>
-      <yloc>704</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>SelectUbicacion 3 2 3 2 2 2 2 2 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>lat</name>
-        <rename>latitud</rename>
-      </field>
-      <field>
-        <name>lon</name>
-        <rename>longitud</rename>
-      </field>
-      <field>
-        <name>limit</name>
-      </field>
-      <field>
-        <name>result</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>304</xloc>
-      <yloc>768</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>SelectUbicacion 3 2 3 2 2 3</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>latitud</name>
-      </field>
-      <field>
-        <name>longitud</name>
-      </field>
-      <field>
-        <name>postalCode</name>
-        <rename>idZona</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>688</yloc>
+      <xloc>624</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3158,33 +2274,39 @@
     <fields>
       <field>
         <name>idUbicacion</name>
+        <rename/>
       </field>
       <field>
         <name>latitud</name>
+        <rename/>
       </field>
       <field>
         <name>longitud</name>
-      </field>
-      <field>
-        <name>idZona</name>
+        <rename/>
       </field>
       <field>
         <name>idLocalidad</name>
+        <rename/>
       </field>
       <field>
         <name>Localidad</name>
+        <rename/>
       </field>
       <field>
         <name>idDepartamento</name>
+        <rename/>
       </field>
       <field>
         <name>Departamento</name>
+        <rename/>
       </field>
       <field>
         <name>idZonaPais</name>
+        <rename/>
       </field>
       <field>
         <name>ZonaPais</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -3216,33 +2338,39 @@
     <fields>
       <field>
         <name>latitud</name>
+        <rename/>
       </field>
       <field>
         <name>longitud</name>
+        <rename/>
       </field>
       <field>
         <name>idUbicacion</name>
-      </field>
-      <field>
-        <name>idZona</name>
+        <rename/>
       </field>
       <field>
         <name>idLocalidad</name>
+        <rename/>
       </field>
       <field>
         <name>Localidad</name>
+        <rename/>
       </field>
       <field>
         <name>idDepartamento</name>
+        <rename/>
       </field>
       <field>
         <name>Departamento</name>
+        <rename/>
       </field>
       <field>
         <name>idZonaPais</name>
+        <rename/>
       </field>
       <field>
         <name>ZonaPais</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -3313,23 +2441,6 @@
         <type>Integer</type>
         <length>-2</length>
         <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>idZona</name>
-        <rename>idZona</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
@@ -3671,42 +2782,6 @@
     <GUI>
       <xloc>672</xloc>
       <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>UnionUbicaciones 2 2 2 2</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>OrderByLatLong 4</step1>
-    <step2>SelectUbicacion 3 2 3 2 2 3</step2>
-    <keys_1>
-      <key>latitud</key>
-      <key>longitud</key>
-    </keys_1>
-    <keys_2>
-      <key>latitud</key>
-      <key>longitud</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>656</xloc>
-      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
