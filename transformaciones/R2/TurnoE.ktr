@@ -1499,11 +1499,9 @@
     <fields>
       <field>
         <name>idTurno</name>
-        <rename/>
       </field>
       <field>
         <name>nomTurno</name>
-        <rename/>
       </field>
       <field>
         <name>idTipo</name>
@@ -1534,6 +1532,103 @@
     <GUI>
       <xloc>1024</xloc>
       <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 2 2 2 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>idTurno</name>
+      </field>
+      <field>
+        <name>nomTurno</name>
+      </field>
+      <field>
+        <name>idTipoTurno</name>
+      </field>
+      <field>
+        <name>nomTipoTurno</name>
+      </field>
+      <field>
+        <name>idFranjaHoraria</name>
+      </field>
+      <field>
+        <name>franjaHoraria</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>idTipoTurno</name>
+        <rename>idTipoTurno</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>idTurno</name>
+        <rename>idTurno</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>idFranjaHoraria</name>
+        <rename>idFranjaHoraria</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1184</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1706,39 +1801,6 @@
     </GUI>
   </step>
   <step>
-    <name>Unique rows (HashSet)</name>
-    <type>UniqueRowsByHashSet</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <store_values>N</store_values>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <error_description/>
-    <fields>
-      <field>
-        <name>Turno</name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>48</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Table output</name>
     <type>TableOutput</type>
     <description/>
@@ -1778,13 +1840,13 @@
     </remotesteps>
     <GUI>
       <xloc>1344</xloc>
-      <yloc>336</yloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values 2 2 2 2</name>
-    <type>SelectValues</type>
+    <name>Unique rows (HashSet)</name>
+    <type>UniqueRowsByHashSet</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1793,83 +1855,13 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <store_values>N</store_values>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
     <fields>
       <field>
-        <name>idTurno</name>
-        <rename/>
+        <name>Turno</name>
       </field>
-      <field>
-        <name>nomTurno</name>
-        <rename/>
-      </field>
-      <field>
-        <name>idTipoTurno</name>
-        <rename/>
-      </field>
-      <field>
-        <name>nomTipoTurno</name>
-        <rename/>
-      </field>
-      <field>
-        <name>idFranjaHoraria</name>
-        <rename/>
-      </field>
-      <field>
-        <name>franjaHoraria</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>idTipoTurno</name>
-        <rename>idTipoTurno</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>idTurno</name>
-        <rename>idTurno</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>idFranjaHoraria</name>
-        <rename>idFranjaHoraria</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1880,8 +1872,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1184</xloc>
-      <yloc>352</yloc>
+      <xloc>464</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

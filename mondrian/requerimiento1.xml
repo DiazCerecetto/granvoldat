@@ -1,4 +1,4 @@
-<Schema name="R1V45">
+<Schema name="R1V52">
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Liceos">
     <Hierarchy name="lic" visible="true" hasAll="true" primaryKey="idliceo" primaryKeyTable="liceo">
       <Table name="liceo" schema="public">
@@ -91,7 +91,7 @@
       </Level>
     </Hierarchy>
     <Hierarchy name="ZonasPostal" visible="true" hasAll="true" primaryKey="idubicacion" primaryKeyTable="ubicacion">
-      <Table name="ubicacion" schema="public" alias="">
+      <Table name="ubicacion" schema="public">
       </Table>
       <Level name="zonaPostal" visible="true" table="ubicacion" column="idzona" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
       </Level>
@@ -99,7 +99,7 @@
       </Level>
     </Hierarchy>
     <Hierarchy name="UrbanaORural" visible="true" hasAll="true" primaryKey="idubicacion" primaryKeyTable="ubicacion">
-      <Table name="ubicacion" schema="public" alias="">
+      <Table name="ubicacion" schema="public">
       </Table>
       <Level name="UrbanaORural" visible="true" table="ubicacion" column="idarea" nameColumn="nomarea" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
       </Level>
@@ -120,7 +120,7 @@
   <Cube name="ofertas sec" visible="true" cache="true" enabled="true">
     <Table name="ofertas_secundaria" schema="public">
     </Table>
-    <DimensionUsage source="Liceos" name="liceo" visible="true" foreignKey="idliceo" highCardinality="false">
+    <DimensionUsage source="Liceos" name="Liceos" visible="true" foreignKey="idliceo" highCardinality="false">
     </DimensionUsage>
     <DimensionUsage source="Modalidad" name="Modalidad" visible="true" foreignKey="idmodalidad" highCardinality="false">
     </DimensionUsage>
@@ -136,10 +136,10 @@
     </DimensionUsage>
     <Measure name="cantofertas" column="cant_ofertas" datatype="Integer" aggregator="sum" visible="true">
     </Measure>
-    <Measure name="porcliceos" column="porcliceos" datatype="Numeric" aggregator="avg" visible="true">
+    <Measure name="cantidad_liceos" column="idliceo" datatype="Integer" aggregator="distinct-count" visible="true">
     </Measure>
-    <Measure name="porcentajeLiceos" column="porc_liceos_aux" datatype="Numeric" aggregator="sum" visible="true">
-    </Measure>
+    <CalculatedMember name="porcentaje_liceos" formula="[Measures].[cantidad_liceos] / 3.2" dimension="Measures" visible="true">
+    </CalculatedMember>
   </Cube>
   <Cube name="ofertas sec_depto" visible="true" cache="true" enabled="true">
     <Table name="ofertas_secundaria_deptos" schema="public">
@@ -162,5 +162,9 @@
     </Measure>
     <Measure name="estudiantes_depto" column="porcestsxdepto" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>
+    <CalculatedMember name="docentes_aux" formula="[Measures].[docentes_depto] * 100" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="estudiantes_aux" formula="[Measures].[estudiantes_depto] * 100" dimension="Measures" visible="true">
+    </CalculatedMember>
   </Cube>
 </Schema>

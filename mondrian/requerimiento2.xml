@@ -1,4 +1,4 @@
-<Schema name="R2V7">
+<Schema name="R2V10">
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Escuelas">
     <Hierarchy name="esc" visible="true" hasAll="true" primaryKey="idescuela" primaryKeyTable="escuela">
       <Table name="escuela" schema="public">
@@ -102,5 +102,9 @@
     </Measure>
     <Measure name="grupos_por_nivel" column="gruposxnivel" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>
+    <Measure name="cantidad_escuelas" column="idescuela" datatype="Numeric" aggregator="distinct-count" visible="true">
+    </Measure>
+    <CalculatedMember name="cantidad_escuelas_prom" formatString="" formula="[Measures].[cantidad_escuelas]/17.7" dimension="Measures" visible="true">
+    </CalculatedMember>
   </Cube>
 </Schema>

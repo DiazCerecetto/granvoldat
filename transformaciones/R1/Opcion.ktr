@@ -436,8 +436,8 @@
   <notepads>
     <notepad>
       <note>select * from opcion</note>
-      <xloc>624</xloc>
-      <yloc>480</yloc>
+      <xloc>496</xloc>
+      <yloc>160</yloc>
       <width>172</width>
       <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
@@ -1139,7 +1139,7 @@ IF(EQUALS([nomOpcion];"")  ; "N/A" ;  [nomOpcion])
     <schema>public</schema>
     <table>opcion</table>
     <commit>1000</commit>
-    <truncate>Y</truncate>
+    <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
     <specify_fields>N</specify_fields>
