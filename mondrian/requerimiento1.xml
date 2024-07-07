@@ -1,9 +1,9 @@
-<Schema name="R1V52">
+<Schema name="R1V55">
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Liceos">
     <Hierarchy name="lic" visible="true" hasAll="true" primaryKey="idliceo" primaryKeyTable="liceo">
       <Table name="liceo" schema="public">
       </Table>
-      <Level name="liceoNivel" visible="true" column="idliceo" nameColumn="nomliceo" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="liceoNivel" visible="true" column="idliceo" nameColumn="idliceo" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomliceo">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -11,7 +11,7 @@
     <Hierarchy name="mod" visible="true" hasAll="true" primaryKey="idmodalidad" primaryKeyTable="modalidad">
       <Table name="modalidad" schema="public">
       </Table>
-      <Level name="ModalidadN" visible="true" column="idmodalidad" nameColumn="nommodalidad" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="ModalidadN" visible="true" column="idmodalidad" nameColumn="idmodalidad" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nommodalidad">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -19,9 +19,9 @@
     <Hierarchy name="Nivel" visible="true" hasAll="true" primaryKey="idgrado" primaryKeyTable="nivel">
       <Table name="nivel" schema="public">
       </Table>
-      <Level name="Ciclo" visible="true" column="idciclo" nameColumn="nomciclo" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="Ciclo" visible="true" column="idciclo" nameColumn="idciclo" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomciclo">
       </Level>
-      <Level name="Grado" visible="true" column="idgrado" parentColumn="idciclo" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="Grado" visible="true" column="idgrado" nameColumn="idgrado" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="idgrado">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -29,7 +29,7 @@
     <Hierarchy name="OpcionAll" visible="true" hasAll="true" primaryKey="idopcion" primaryKeyTable="opcion">
       <Table name="opcion" schema="public">
       </Table>
-      <Level name="Opcion" visible="true" column="idopcion" nameColumn="nomopcion" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="Opcion" visible="true" column="idopcion" nameColumn="idopcion" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomopcion">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -37,9 +37,9 @@
     <Hierarchy name="turnoLHorarios" visible="true" hasAll="true" primaryKey="idturno" primaryKeyTable="turnol">
       <Table name="turnol" schema="public">
       </Table>
-      <Level name="horarios" visible="true" table="turnol" column="idhorario" nameColumn="nomhorario" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="horarios" visible="true" table="turnol" column="idhorario" nameColumn="idhorario" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomhorario">
       </Level>
-      <Level name="turnos" visible="true" table="turnol" column="idturno" nameColumn="nomturno" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="turnos" visible="true" table="turnol" column="idturno" nameColumn="idturno" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomturno">
       </Level>
     </Hierarchy>
     <Hierarchy name="turnoLFranjas" visible="true" hasAll="true" primaryKey="idturno" primaryKeyTable="turnol">
@@ -47,7 +47,7 @@
       </Table>
       <Level name="FranjaHorarias" visible="true" table="turnol" column="idfranjahoraria" nameColumn="franjahoraria" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="turnos" visible="true" table="turnol" column="idturno" nameColumn="nomturno" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="turnos" visible="true" table="turnol" column="idturno" nameColumn="idturno" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomturno">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -55,25 +55,25 @@
     <Hierarchy name="planFranjasHorarias" visible="true" hasAll="true" primaryKey="idplan" primaryKeyTable="plan">
       <Table name="plan" schema="public">
       </Table>
-      <Level name="franjaedad" visible="true" table="plan" column="idfranjaedad" nameColumn="franjaedad" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="franjaedad" visible="true" table="plan" column="idfranjaedad" nameColumn="idfranjaedad" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="franjaedad">
       </Level>
-      <Level name="planes" visible="true" table="plan" column="idplan" nameColumn="nomplan" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="planes" visible="true" table="plan" column="idplan" nameColumn="idplan" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomplan">
       </Level>
     </Hierarchy>
     <Hierarchy name="PlanEpocas" visible="true" hasAll="true" primaryKey="idplan" primaryKeyTable="plan">
       <Table name="plan" schema="public">
       </Table>
-      <Level name="epocas" visible="true" table="plan" column="idepoca" nameColumn="nomepoca" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="epocas" visible="true" table="plan" column="idepoca" nameColumn="idepoca" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomepoca">
       </Level>
-      <Level name="planes" visible="true" table="plan" column="idplan" nameColumn="nomplan" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="planes" visible="true" table="plan" column="idplan" nameColumn="idplan" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomplan">
       </Level>
     </Hierarchy>
     <Hierarchy name="planEsNuevo" visible="true" hasAll="true" primaryKey="idplan" primaryKeyTable="plan">
       <Table name="plan" schema="public">
       </Table>
-      <Level name="esNuevo" visible="true" table="plan" column="idesnuevo" nameColumn="esnuevo" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="esNuevo" visible="true" table="plan" column="idesnuevo" nameColumn="idesnuevo" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="esnuevo">
       </Level>
-      <Level name="planes" visible="true" table="plan" column="idplan" nameColumn="nomplan" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="planes" visible="true" table="plan" column="idplan" nameColumn="idplan" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomplan">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -81,29 +81,29 @@
     <Hierarchy name="JerarquiaPrincipal" visible="true" hasAll="true" primaryKey="idubicacion" primaryKeyTable="ubicacion">
       <Table name="ubicacion" schema="public">
       </Table>
-      <Level name="zonapais" visible="true" table="ubicacion" column="idzonapais" nameColumn="nomzonapais" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="zonapais" visible="true" table="ubicacion" column="idzonapais" nameColumn="idzonapais" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomzonapais">
       </Level>
-      <Level name="departamento" visible="true" table="ubicacion" column="iddepartamento" nameColumn="nomdepartamento" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="departamento" visible="true" table="ubicacion" column="iddepartamento" nameColumn="iddepartamento" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomdepartamento">
       </Level>
-      <Level name="localidad" visible="true" table="ubicacion" column="idlocalidad" nameColumn="nomlocalidad" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="localidad" visible="true" table="ubicacion" column="idlocalidad" nameColumn="idlocalidad" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomlocalidad">
       </Level>
-      <Level name="ubicacion" visible="true" table="ubicacion" column="idubicacion" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="ubicacion" visible="true" table="ubicacion" column="idubicacion" nameColumn="idubicacion" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="idubicacion">
       </Level>
     </Hierarchy>
     <Hierarchy name="ZonasPostal" visible="true" hasAll="true" primaryKey="idubicacion" primaryKeyTable="ubicacion">
       <Table name="ubicacion" schema="public">
       </Table>
-      <Level name="zonaPostal" visible="true" table="ubicacion" column="idzona" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="zonaPostal" visible="true" table="ubicacion" column="idzona" nameColumn="idzona" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomzona">
       </Level>
-      <Level name="ubicacion" visible="true" table="ubicacion" column="idubicacion" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="ubicacion" visible="true" table="ubicacion" column="idubicacion" nameColumn="idubicacion" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="idubicacion">
       </Level>
     </Hierarchy>
     <Hierarchy name="UrbanaORural" visible="true" hasAll="true" primaryKey="idubicacion" primaryKeyTable="ubicacion">
       <Table name="ubicacion" schema="public">
       </Table>
-      <Level name="UrbanaORural" visible="true" table="ubicacion" column="idarea" nameColumn="nomarea" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="UrbanaORural" visible="true" table="ubicacion" column="idarea" nameColumn="idarea" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomarea">
       </Level>
-      <Level name="ubicacion" visible="true" table="ubicacion" column="idubicacion" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="ubicacion" visible="true" table="ubicacion" column="idubicacion" nameColumn="idubicacion" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="idubicacion">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -113,7 +113,7 @@
       </Table>
       <Level name="zonaPais" visible="true" table="departamento" column="idzonapais" nameColumn="nomzonapais" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="departamento" visible="true" table="departamento" column="nomdepartamento" nameColumn="nomdepartamento" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="departamento" visible="true" table="departamento" column="iddepartamento" nameColumn="iddepartamento" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nomdepartamento">
       </Level>
     </Hierarchy>
   </Dimension>
