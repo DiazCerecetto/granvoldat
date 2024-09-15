@@ -2,6 +2,13 @@
 
 [Informe PDF](./informe/Informe.pdf)
 
+Ejemplo en PowerBI
+![Dashboard PowerBI, tablero de cantidad de liceos siendo consultado por el departamento Montevideo, subsistema DGEIP y turno vespertino.](./informe/powerBI_example.png)
+
+Ejemplo en pentaho Visualizer
+![Dashboard de la oferta estudiantil pública en Artigas](./informe/dashboard.png)
+
+
 Este repositorio contiene los archivos y entregas provistas para el proyecto final de la materia "Sistemas de información para el análisis de grandes volumenes de datos".
 
 ## Tecnologias utilizadas
